@@ -20,7 +20,6 @@ RUN \
     xvfb \
     apt-utils \
     gnupg2 \
-    python-xdg \
     software-properties-common && \
     wget -qO - https://dl.winehq.org/wine-builds/winehq.key | apt-key add - && \
     apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ && \
@@ -30,6 +29,7 @@ RUN curl -LO https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/
     && rm libfaudio* && \
     apt-get update && apt-get install -qy \
     wine-staging-i386 \
+    python-xdg \
     winehq-staging
 # https://wiki.winehq.org/Mono
 #RUN curl https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks > /usr/local/bin/winetricks && \
