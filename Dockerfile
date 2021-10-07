@@ -19,7 +19,8 @@ RUN \
     winbind \
     xvfb \
     apt-utils \
-    gnupg2 \ 
+    gnupg2 \
+    python-xdg \
     software-properties-common && \
     wget -qO - https://dl.winehq.org/wine-builds/winehq.key | apt-key add - && \
     apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ && \
